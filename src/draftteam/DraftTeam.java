@@ -1,4 +1,4 @@
-package code;
+package draftteam;
 
 public class DraftTeam {
 	

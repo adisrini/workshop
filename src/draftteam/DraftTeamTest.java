@@ -1,4 +1,4 @@
-package tests;
+package draftteam;
 
 import static org.junit.Assert.*;
 
@@ -6,15 +6,13 @@ import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import code.DraftTeam;
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class DraftTeam_Test {
+public class DraftTeamTest {
 	
-	private long timeLimit = 5000000;	// 5 ms in ns
+	private static final long TIME_LIMIT = 5000000;	   // 5 ms in ns
+	
 	@Test
-	public void testcase1() 
-	{
+	public void testcase1() {
 		long[] teams = {5,1,2};
 		long[] picks = {8, 2, 5};
 		
@@ -22,12 +20,12 @@ public class DraftTeam_Test {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 1 failed", DraftTeam.draftTeam(teams, i), picks[i]);
+			assertEquals("testcase 1 failed", picks[i], DraftTeam.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
 		// Must execute in less than 5 ms
-		assertTrue("testcase 1 timed out", (endTime - startTime) < timeLimit);
+		assertTrue("testcase 1 timed out", (endTime - startTime) < TIME_LIMIT);
 	}
 	
 	@Test
@@ -40,12 +38,12 @@ public class DraftTeam_Test {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 2 failed", DraftTeam.draftTeam(teams, i), picks[i]);
+			assertEquals("testcase 2 failed", picks[i], DraftTeam.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
 		// Must execute in less than 5 ms
-		assertTrue("testcase 2 timed out", (endTime - startTime) < timeLimit);
+		assertTrue("testcase 2 timed out", (endTime - startTime) < TIME_LIMIT);
 	}
 	
 	@Test
@@ -58,12 +56,12 @@ public class DraftTeam_Test {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 3 timed out", DraftTeam.draftTeam(teams, i), picks[i]);
+			assertEquals("testcase 3 timed out", picks[i], DraftTeam.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
 		// Must execute in less than 5 ms
-		assertTrue("testcase 3 timed out", (endTime - startTime) < timeLimit);
+		assertTrue("testcase 3 timed out", (endTime - startTime) < TIME_LIMIT);
 	}
 	
 	@Test
@@ -76,12 +74,12 @@ public class DraftTeam_Test {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 4 failed", DraftTeam.draftTeam(teams, i), picks[i]);
+			assertEquals("testcase 4 failed", picks[i], DraftTeam.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
 		// Must execute in less than 5 ms
-		assertTrue("testcase 4 timed out", (endTime - startTime) < timeLimit);
+		assertTrue("testcase 4 timed out", (endTime - startTime) < TIME_LIMIT);
 		
 	}
 	
@@ -95,12 +93,12 @@ public class DraftTeam_Test {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 5 failed", DraftTeam.draftTeam(teams, i), picks[i]);
+			assertEquals("testcase 5 failed", picks[i], DraftTeam.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
 		// Must execute in less than 5 ms
-		assertTrue("testcase 5 timed out", (endTime - startTime) < timeLimit);
+		assertTrue("testcase 5 timed out", (endTime - startTime) < TIME_LIMIT);
 	}
 	
 	
