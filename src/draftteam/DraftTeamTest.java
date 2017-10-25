@@ -2,6 +2,8 @@ package draftteam;
 
 import static org.junit.Assert.*;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -10,6 +12,17 @@ import org.junit.runners.MethodSorters;
 public class DraftTeamTest {
 	
 	private static final long TIME_LIMIT = 5000000;	   // 5 ms in ns
+	private DraftTeam dt;
+	
+	@Before
+	public void setUp() {
+	    dt = new DraftTeam();
+	}
+	
+	@After
+	public void tearDown() {
+	    dt = null;
+	}
 	
 	@Test
 	public void testcase1() {
@@ -20,7 +33,7 @@ public class DraftTeamTest {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 1 failed", picks[i], DraftTeam.draftTeam(teams, i));
+			assertEquals("testcase 1 failed", picks[i], dt.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
@@ -38,7 +51,7 @@ public class DraftTeamTest {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 2 failed", picks[i], DraftTeam.draftTeam(teams, i));
+			assertEquals("testcase 2 failed", picks[i], dt.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
@@ -56,7 +69,7 @@ public class DraftTeamTest {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 3 timed out", picks[i], DraftTeam.draftTeam(teams, i));
+			assertEquals("testcase 3 timed out", picks[i], dt.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
@@ -74,7 +87,7 @@ public class DraftTeamTest {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 4 failed", picks[i], DraftTeam.draftTeam(teams, i));
+			assertEquals("testcase 4 failed", picks[i], dt.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			
@@ -93,7 +106,7 @@ public class DraftTeamTest {
 		
 		for (int i = 0; i < teams.length; i++)
 		{
-			assertEquals("testcase 5 failed", picks[i], DraftTeam.draftTeam(teams, i));
+			assertEquals("testcase 5 failed", picks[i], dt.draftTeam(teams, i));
 		}
 		
 		long endTime = System.nanoTime();			

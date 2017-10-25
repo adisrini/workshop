@@ -1,5 +1,4 @@
 package longestsubstring;
-import java.util.*;
 
 /**
  * Given a string, find the length of the longest substring without repeating characters.
@@ -10,10 +9,10 @@ import java.util.*;
  * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
 
-public class LongestSubstringWithoutRepeat {
+public class LongestSubstring {
 	
-    public static int lengthOfLongestSubstring(String s) {
-    	// Your code goes here
+    public int lengthOfLongestSubstring(String s) {
+        // TODO: implement solution
     	return 0;
     }
     
