@@ -1,6 +1,13 @@
 # Compiled class file
 *.class
 
+# Preference Files
+*.prefs
+
+# Eclipse Metadata
+*.metadata
+*.recommenders
+
 # Log file
 *.log
 
