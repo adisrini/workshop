@@ -1,7 +1,6 @@
 package bstiterator;
 
 import java.util.Iterator;
-import java.util.Stack;
 
 /**
  * Implement an iterator over a binary search tree (BST).
